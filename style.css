@@ -1,0 +1,1005 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+/*start global  */
+:root{
+    --main-color:#E91E63;
+    --second-color:#071ea0;
+    --white:#fff;
+    --black:#000;
+}
+.title{
+    color: var(--main-color);
+}
+.container{
+    overflow: hidden;
+}
+/* start navbar  */
+nav{
+    transition: 0.5s;
+    z-index: 999;
+    width: 100%;
+    background-color: #78adbf;
+    position: relative;
+}
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+}
+nav .container .logo{
+    font-size: 40px;
+    text-decoration: none;
+}
+nav .container .logo img{
+    width: 20%;
+}
+
+nav .container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .container ul li{
+    position: relative;
+}
+nav .container ul li a{
+    padding: 0 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav .container ul li{
+    color: var(--main-color);
+}
+nav .container ul li::before, 
+nav .container ul li::after{
+    content: "";
+    position: absolute;
+    width:100% ;
+    height: 2px;
+    background-color: white;
+    opacity: 0;
+    transition: 0.5s;
+    left: 0;
+} 
+nav .container ul li::before{
+    top: -50px;
+}
+nav .container ul li::after{
+    bottom: -50px;
+    right: 0;
+}
+nav .container ul li:hover:before{
+    opacity: 1;
+    top: -10px;
+}
+nav .container ul li:hover:after{
+    opacity: 1;
+    bottom: -10px;
+}
+
+nav .container .navToggler{
+    display: none;
+    flex-direction: column;
+}
+nav .container .navbar-toggler .bars{
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 7px;
+}
+/* start tg  */
+.tg_slider .swiper-slide{
+    text-align: center;
+}
+/* start services  */
+.services{
+    background-color: #eee;
+}
+.services .container .title{
+    padding-top: 40px;
+    color: #071ea0;
+} 
+.services .cards{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.services .cards .box{
+    padding-bottom: 25px;
+    width: 230px;
+}
+.services .cards .box span{
+    position: relative;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+.services .cards .box span i{
+    font-size: 35px;
+}
+.services .cards .box button{
+    padding: 5px 10px;
+    color: var(--main-color);
+    background: transparent;
+    border: none;
+    border: 2px solid var(--main-color);
+    transition: 0.5s;
+}
+.services .cards .box:hover span{
+    background-color: var(--second-color);
+}
+.services .cards .box:hover button{
+    border-color: var(--second-color);
+    color: var(--white);
+    background-color: var(--second-color);
+    outline: none;
+}
+/* start new games  */
+.newGames .cards .box {
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+.newGames .cards{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.newGames .cards .box img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.newGames .cards .box .info{
+    background-color: #000;
+    opacity: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.5s;
+}
+.newGames .cards .box .info a{
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+}
+.newGames .cards .box:hover .info{
+    opacity: 0.7;
+    height:100%;
+} 
+/*-- //footer --*/
+.footer{
+	padding:55px 0px;
+    background-color: white;
+}
+.footer h4{
+	text-align:left;
+	color:#000;
+	font-size:27px;
+	margin-bottom:30px;
+}
+.footer a{
+    text-decoration: none;
+}
+.footer .row{
+    border-bottom: 1px dotted black;
+}
+
+.footer-left-w3 ul {
+    display: flex;
+    gap: 15px ;
+}
+.footer-left-w3 .glyphicon{
+	font-size:16px;
+}
+.footer-left-w3 ul li h6{
+	font-size:16px;
+	color:#000;
+	margin-left:10px;
+}
+.footer-left-w3 ul li a{
+	font-size:14px;
+	color:#000;
+}
+
+.footer-middle-w3{
+    margin-top:25px;
+}
+.footer-middle-w3 .images{
+	display: flex;
+    flex-wrap: wrap;
+}
+.footer-middle-w3 a img {
+    width: 80px;
+    margin-bottom: 25px;
+}
+
+.footer-right-w3 h4{
+	color: #E91E63;
+}
+.footer-right-w3 img {
+    width: 12%;
+}
+.footer-right-w3 p{
+	font-size:14px;
+	color:#000;
+	line-height:30px;
+}
+
+.footer p.agileinfo{
+	margin-top:30px;
+}
+.footer .copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+}
+.foorer .copyright p {
+    font-size: 14px;
+    color: #000;
+    border-top: 1px dotted #000;
+    padding: 30px 0px 0 0px;
+}
+.footer .copyright p a{
+    color:var(--main-color);
+	text-decoration:none;
+    font-weight: bold;
+}
+/* start about us */
+.about .container .cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about .container ul li{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 20px;
+}
+.about .container ul li > span{
+    background-color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -9px;
+}
+.about .container ul li p{
+    color: #777;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.about .container ul li p::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    transition: 0.5s;
+    background-color: var(--second-color);
+    z-index: -1;
+    right: 0;
+}
+.about .container ul li p:hover:before{
+    width: 100%;
+}
+.about .container ul li p:hover{
+    color: white;
+}
+
+.about .container .image{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    outline: 1px dotted black;
+    outline-offset: 10px;
+}
+.about .container .image img{
+    max-width: 470px;
+}
+
+.about .container .image .infoBox{
+    position: absolute;
+    bottom:-50px;
+    color: white;
+    background-color: var(--main-color);
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+.about .container .image .infoBox .info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.about .container .image .infoBox .info span{
+    transition: 0.5s;
+}
+.about .container .image .infoBox .info span:hover{
+    color: black;
+    cursor: pointer;
+}
+.about .container .image:hover .infoBox{
+    bottom: 0px;
+}
+/* start game services  */
+.games .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.games .info{
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+.games .cards .info img{
+    width: 15%;
+}
+.games .cards .info h3{
+    padding: 25px 0;
+}
+.games .image img{
+    width: 300px;
+}
+/* start team  */
+.team .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.team .cards .box .image{
+    overflow: hidden;
+    position: relative;
+}
+.team .cards .box .image img{
+    width: 250px;
+}
+.team .cards .box .image .overlay{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: black;
+    opacity: 0.2;
+    transform: rotate(45deg);
+    right: -100px;
+    bottom: -100px;
+    transition: 0.3s;
+    visibility: hidden;
+}
+.team .cards .box:hover .overlay{
+    width: 270%;
+    height: 270%;
+    visibility: visible;
+}
+
+.team .cards .box .imgInfo .links{
+    position: absolute;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    left: -150px;
+    transition: 0.5s 0.2s;
+}
+.team .cards .box .imgInfo .links::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background-color: white;
+    top: 50px;
+    margin-bottom: 15px;
+}
+.team .cards .box:hover .links{
+    left: 10px;
+}
+.team .cards .box .imgInfo .links a{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease all;
+    text-decoration: none;
+}
+.team .cards .box .imgInfo .links a i{
+    font-size: 20px;
+    color: black;
+    transition: 0.2s ease all;
+}
+.team .cards .box .imgInfo a:hover{
+    background-color: transparent;
+}
+.team .cards .box .imgInfo a:hover .linkedin{
+    color: #3a5178;
+}
+.team .cards .box .imgInfo a:hover .google{
+    color: #c03030;
+}
+.team .cards .box .imgInfo a:hover .twitter{
+    color: #487edb;
+}
+.team .cards .box .imgInfo a:hover .facebook{
+    color: #3a5178;
+}
+.team .cards .box .imgInfo p{
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    bottom: -250px;
+    left: 10px;
+    text-align: start;
+    transition: 0.5s 0.3s;
+}
+.team .cards .box:hover .imgInfo p{
+    bottom: 0px;
+}
+/* start exclusive games  */
+.exclusive{
+    background-color: #eee;
+}
+.exclusive .cards{
+    display: flex;
+    gap: 15px;
+}
+.exclusive .cards .grid{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.exclusive .cards img{
+    width: 270px;
+    transition: 0.7s ease all;
+}
+.exclusive .cards .grid img:hover{
+    transform: scale(0.9);
+}
+
+.exclusive .overlay {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.exclusive .dialogs .dialog{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    padding: 45px 30px;
+    gap: 30px;
+    color: white;
+}
+.exclusive .dialogs .dialog .image img{
+    width: 270px;
+    transition: 0.7s;
+}
+.exclusive .dialogs .dialog .image img:hover{
+    transform: scale(0.9);
+}
+
+.exclusive .dialogs .dialog .details p{
+    font-size: 15px;
+}
+.exclusive .dialogs .dialog .details .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    border-top:1px solid white ;
+    padding-top: 20px;
+}
+.exclusive .dialogs .dialog .details .info h6{
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+.exclusive .dialogs .dialog .details .info span{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+}
+.exclusive .dialogs .dialog .close{
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* start news  */
+.gameInfo {
+    background-color: #eee;
+}
+.gameInfo .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.gameInfo .box img{
+    width: 350px;
+}
+.gameInfo .box .info .details{
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: #777;
+}
+.gameInfo .box .info .details span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.gameInfo .box .info p {
+    font-size: 14px;
+    line-height: 3;
+    color: #777;
+}
+.gameInfo .box .info button{
+    border: none;
+    border: 2px solid var(--second-color);
+    padding: 5px 15px;
+    transition: 0.5s;
+}
+.gameInfo .box .info button a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+.gameInfo .box .info button:hover{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.gameInfo .box .info button:hover a{
+    color: white;
+}
+
+/* start contact  */
+.contact ul h5{
+    color: var(--main-color);
+    font-weight: bold;
+}
+.contact ul li{
+    color: #777;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.contact form{
+    position: relative;
+}
+.contact form:not(:last-child) {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact form input{
+    width: 365px;
+    border: none;
+    outline: none;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 25px;
+    padding: 15px 10px;
+}
+.contact form textarea{
+    border: none;
+    outline: none;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 25px;
+    padding: 15px 10px;
+}
+.contact form button{
+    display: flex;
+    float: right;
+    background: transparent;
+    border: 2px solid var(--second-color);
+    padding: 5px;
+    color: var(--second-color);
+    font-size: 15px;
+    transition: 0.5s;
+}
+.contact form button:hover{
+    background: var(--main-color);
+    border-color: var(--main-color);
+    color: white;
+}
+
+/* start game review  */
+.review .gameReview .info > h5{
+    color: var(--main-color);
+}
+.review .gameReview .info > span{
+    font-weight: bolder;
+    letter-spacing: 2;
+    font-size: 20px;
+}
+.review .gameReview .info .details{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 15px;
+    color: #777;
+}
+.review .gameReview .info .details span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}   
+.review .gameReview .info .details span:not(:last-child){
+    border-right: 2px solid;
+    padding-right: 15px;
+}   
+.review .gameReview .info p{
+    color: #777;
+    font-size: 14px;
+    line-height: 2;
+}
+.review .gameReview .info form h5{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.review .gameReview .info form input ,
+.review .gameReview .info form textarea{
+    background: transparent;
+    border: 1px solid black;
+    width: 100%;
+    padding:10px 15px;
+    margin-bottom: 25px;
+}
+.review .gameReview .info form button{
+    display: flex;
+    background: transparent;
+    border: 2px solid var(--second-color);
+    padding: 10px 40px;
+    color: var(--second-color);
+    font-size: 15px;
+    transition: 0.5s;
+}
+.review .gameReview .info button:hover{
+    background: var(--main-color);
+    border-color: var(--main-color);
+    color: white;
+}
+
+.review .gameInfo .search{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.review .gameInfo .search input{
+    background: transparent;
+    padding: 10px 5px;
+    flex-grow: 1;
+    border: 1px solid black;
+    font-size: 15px;
+}
+.review .gameInfo .search button{
+    background-color: var(--second-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 13px 40px;
+    border: none;
+}
+.review .gameInfo  h5{
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom:15px ;
+}
+.review .gameInfo span{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: #777;
+    padding-bottom: 20px;
+}
+.review .gameInfo .posts .images{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.review .gameInfo .posts img{
+    width: 200px;
+}
+
+@media (max-width:767px) {
+    nav .container .logo{
+        font-size: 20px;
+    }
+    nav .container .navToggler{
+        display: flex;
+        font-size: 25px;
+        color: white;
+    }
+    nav .container ul {
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        background-color: #888;
+        width: 100%;
+        text-align: center;
+        height: 0;
+        transition: 0.5s ease all;
+    }
+    nav .container ul li{
+        padding: 15px;
+    }
+    nav .container ul li::after,
+    nav .container ul li::before{
+        width: 0;
+    }
+    .services .cards{
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+    .newGames .cards .box {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+    .games .cards {
+        gap: 15px;
+    }
+    .games .image img{
+        width: 220px;
+    }
+    .games .info{
+        width: 220px;
+        height: 220px;
+    }
+    .gameInfo .box{
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .gameInfo .box .details{
+        justify-content: center;
+    }
+    .footer-left-w3 ul{
+        display: flex;
+        gap: 20px;
+    }
+    .footer-middle-w3 .images{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .footer .copyright p{
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media (max-width:990px) {
+    nav .container .logo{
+        font-size: 20px;
+    }
+    .about .container .cards{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .about .container .image img{
+        width: 350px;
+    }
+    .about .container ul li{
+        padding-bottom: 0px;
+        gap: 15px;
+    }
+    .about .container ul li > span{
+        width: 30px;
+        height: 30px;
+    }
+    .about .container ul li p{
+        font-size: 12px;
+    }
+    .games .cards {
+        gap: 15px;
+    }
+    .games .image img{
+        width: 250px;
+    }
+    .games .info{
+        width: 250px;
+        height: 250px;
+    }
+    .exclusive .cards{
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .exclusive .dialogs .dialog{
+        width: 650px;
+        top: 60%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .exclusive .dialogs .dialog .image img:hover{
+        transform: scale(none);
+    }
+    .gameInfo .box .info .details{
+        margin: 30px 0;
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 5px 20px;
+        font-size: 12px;
+        color: #777;
+    }
+    .gameInfo .box .info .details span{
+        gap: 10px;
+        text-align: center;
+    }
+    .gameInfo .box .info p{
+        line-height: 2;
+    }
+    .contact .info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .review .gameInfo .posts .images{
+        justify-content: center;
+    }
+    .review .gameInfo .posts .images img{
+        width: 170px;
+    }
+    .review .gameInfo .search{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        margin-top: 30px;
+    }
+    .footer{
+        padding:100px 0px;
+    }
+    .footer .footer-left-w3 ul{
+        gap: 2px;
+        text-align: center;
+    }
+    .footer .footer-middle-w3 .images{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 15px;
+    }
+}
+@media (max-width:1075px) {
+    .games .image img{
+        width: 250px;
+    }
+    .games .info{
+        max-width: 250px;
+        height: 250px;
+    }
+    .games .cards .info img{
+        max-width: 15%;
+    }
+    .games .cards .info h3{
+        padding: 25px 0;
+    }
+    .games .cards .info p{
+        font-size: 12px;
+    }
+    .team .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .exclusive .cards{
+        display: flex;
+        gap: 15px;
+    }
+    .exclusive .cards img{
+        width: 230px;
+        transition: 0.7s ease all;
+    }
+    .exclusive .dialogs .dialog{
+        width: 650px;
+        top: 60%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .contact form input{
+        width: 100%;
+    }
+    .contact ul:last-child{
+        margin-bottom: 50px;
+    }
+    .contact ul h5{
+        padding-bottom: 10px;
+    }
+    .contact ul li{
+        padding: 5px;
+    }
+    .review .gameInfo .posts img{
+        width: 170px;
+    }
+}
