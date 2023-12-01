@@ -832,6 +832,37 @@ nav .container .navbar-toggler .bars{
         width: 220px;
         height: 220px;
     }
+    .exclusive .dialogs{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+    }
+    .exclusive .dialogs .dialog{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--main-color);
+        padding: 45px 30px;
+        gap: 0px;
+        color: white;
+    }
+    .exclusive .dialogs .dialog .image img{
+        width: 200px;
+        transition: 0.7s;
+        margin-bottom: 25px;
+    }
+    .exclusive .dialogs .dialog .close{
+        position: absolute;
+        top: 0px;
+        right: 110px;
+        color: black;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .exclusive .overlay {
+        display: none;
+    }
     .gameInfo .box{
         flex-direction: column;
         text-align: center;
