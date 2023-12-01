@@ -38,7 +38,7 @@ dialogImg.forEach((img) =>{
         let imageContainer = document.createElement("div")
         imageContainer.classList.add("image");
         let image = document.createElement("img");
-        image.src = img.parentElement.getElementsByClassName("img")[0].src;
+        image.src = img.getElementsByClassName("img")[0].src;
         imageContainer.appendChild(image);
         dialog.appendChild(imageContainer);
 
